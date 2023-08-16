@@ -4,16 +4,17 @@
     - Display an option to add new tasks
     - Option to exit
 """
-task = []
+tasks = []
 
-while 
-    display(tasks[])
+while True:
+    print(tasks)
+    user_input = input("Do you want to input a task? (Y or N): ")
 
-    add = print(input("Add task (Y/N):"))
-
-    if add == 'y' or 'Y':
-        print(input("Task: "))
-    elif add == 'n' or 'N':
-        exit()
+    if user_input == "Y" or user_input == "y":
+        new_input = input("Type your new task: ")
+        tasks.append(new_input)
+    elif user_input == "N" or user_input == "n":
+        print(tasks)
+        break
     else:
-        print('invalid answer, plsease input Y for yes or N for no')
+        print("Invalid input. Please enter Y or N.")
