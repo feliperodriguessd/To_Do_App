@@ -4,13 +4,13 @@
     - Display an option to add new tasks
     - Option to exit
 """
-tasks = []
+tasks = {}
 
 while True:
     print(tasks)
-    user_input = input("Do you want to input a task? (Y or N): ")
+    user_input = input("Press 'T' to add a new task. Press 'D' to delete a task. Press 'E' to exit")
 
-    if user_input == "Y" or user_input == "y":
+    if user_input == "T" or user_input == "t":
         new_input = input("Type your new task: ")
         tasks.append(new_input)
     elif user_input == "N" or user_input == "n":
