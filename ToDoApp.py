@@ -24,6 +24,8 @@ while True:
             if 0 <= delete_index < len(tasks):
                 del tasks[delete_index]
                 print(tasks)
+            else:
+                print(f"invalid Index, please type a number between 0 and",len(tasks))
         else:
             print(tasks )
 
