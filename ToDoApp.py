@@ -15,6 +15,9 @@ while True:
         print("Tasks: ", tasks)
     
     elif user_input.lower() == "d":
+        for index, task in enumerate(tasks, start=1):
+            print(f"Press {index} to delete '{task}'")
+
         delete_input = input("Type the number of the task you want to delete or 'E' to exit")
         if delete_input.isdigit():
             delete_index = int(delete_input) - 1
@@ -28,4 +31,4 @@ while True:
         break
 
     else:
-        print("Invalid input. Please enter Y or N.")
+        print("Invalid input. Please enter 'T', 'D' or 'E'")
