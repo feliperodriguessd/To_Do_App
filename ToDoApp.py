@@ -7,14 +7,25 @@
 tasks = []
 
 while True:
-    print(tasks)
-    user_input = input("Do you want to input a task? (Y or N): ")
+    user_input = input("Press 'T' to add a new task. Press 'E' to exit. Press 'D' to delete a task.")
 
-    if user_input == "Y" or user_input == "y":
+    if user_input.lower() == "t":
         new_input = input("Type your new task: ")
         tasks.append(new_input)
-    elif user_input == "N" or user_input == "n":
-        print(tasks)
-        break  
+        print("Tasks: ", tasks)
+    
+    elif user_input.lower() == "d":
+        delete_input = input("Type the number of the task you want to delete or 'E' to exit")
+        if delete_input.isdigit():
+            delete_index = int(delete_input) - 1
+            if 0 <= delete_index < len(tasks):
+                del tasks[delete_index]
+                print(tasks)
+        else:
+            print(tasks )
+
+    elif user_input.lower() == "e":
+        break
+
     else:
         print("Invalid input. Please enter Y or N.")
