@@ -45,6 +45,7 @@ class TodoApp:
             
             elif user_input.lower() == "d":
                 self.delete_task()
+                self.display_tasks()
             
             elif user_input.lower() == "e":
                 print("Exiting the app.")
