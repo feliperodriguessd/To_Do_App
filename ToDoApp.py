@@ -39,6 +39,7 @@ class TodoApp:
             user_input = input("Press 'T' to add a new task. Press 'E' to exit. Press 'D' to delete a task: ")
             
             if user_input.lower() == "t":
+                self.display_tasks()
                 new_input = input("Type your new task: ")
                 self.add_task(new_input)
             
