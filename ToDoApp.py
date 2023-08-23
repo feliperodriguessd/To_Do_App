@@ -36,14 +36,16 @@ class TodoApp:
 
     def run(self):
         while True:
+            self.display_tasks()
             user_input = input("Press 'T' to add a new task. Press 'E' to exit. Press 'D' to delete a task: ")
-            
+
             if user_input.lower() == "t":
                 new_input = input("Type your new task: ")
                 self.add_task(new_input)
             
             elif user_input.lower() == "d":
                 self.delete_task()
+                self.display_tasks()
             
             elif user_input.lower() == "e":
                 print("Exiting the app.")
